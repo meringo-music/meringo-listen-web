@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Meringo Listen icon">
+  <defs>
+    <linearGradient id="li-gld" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4D080"/>
+      <stop offset="100%" stop-color="#C89040"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="18" fill="#1A0E2E"/>
+  <circle cx="40" cy="40" r="33" fill="none" stroke="#E8B560" stroke-opacity="0.28" stroke-width="0.75"/>
+  <!-- open book -->
+  <path d="M16 50 Q40 42 64 50" fill="none" stroke="#9b7fd4" stroke-opacity="0.5" stroke-width="1.4"/>
+  <path d="M16 50 Q40 42 64 50 L64 54 Q40 46 16 54 Z" fill="#261840"/>
+  <!-- chapter ticks (an EQ ruler reinterpreted as chapters) -->
+  <g fill="url(#li-gld)">
+    <rect x="24" y="38" width="3" height="10" rx="1.5"/>
+    <rect x="30" y="32" width="3" height="16" rx="1.5"/>
+    <rect x="36" y="27" width="3" height="21" rx="1.5"/>
+    <rect x="42" y="30" width="3" height="18" rx="1.5"/>
+    <rect x="48" y="34" width="3" height="14" rx="1.5"/>
+    <rect x="54" y="39" width="3" height="9" rx="1.5"/>
+  </g>
+  <!-- current-chapter mark -->
+  <circle cx="37.5" cy="23" r="2" fill="#E8B560"/>
+</svg>
