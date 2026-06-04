@@ -32,13 +32,22 @@
   "publisher": {
     "@type": "Organization",
     "name": "Meringo Labs LLC",
-    "url": "https://meringolisten.app/"
+    "url": "https://meringolisten.app/",
+    "sameAs": [
+      "https://meringo.app/",
+      "https://play.google.com/store/apps/details?id=app.meringo.listen"
+    ]
   },
   "url": "https://meringolisten.app/",
   "softwareVersion": "1.0.0",
   "author": {
     "@type": "Person",
-    "name": "Adam Siemaszko"
+    "name": "Adam Siemaszko",
+    "url": "https://adamsiemaszko.com/",
+    "sameAs": [
+      "https://adamsiemaszko.com/",
+      "https://www.linkedin.com/in/adamsiemaszko/"
+    ]
   },
   "offers": {
     "@type": "Offer",
@@ -414,6 +423,15 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
   .footer-mascot { grid-column: 1; justify-self: start; }
 }
 </style>
+
+<!-- ── Privacy-friendly analytics (cookieless, no personal data, no cross-site) ──
+     INACTIVE until you uncomment. Activate after creating a free Plausible account
+     and adding this domain (https://plausible.io). Cookieless and GDPR-clean.
+     Brand note: this loads a 3rd-party script from plausible.io, visible in devtools —
+     worth weighing against this app's "no tracking" promise (that promise is about the
+     app, but a sharp-eyed visitor may notice the site call). Leave off for zero external
+     calls. Free self-hostable alternative: GoatCounter (https://www.goatcounter.com). -->
+<!-- <script defer data-domain="meringolisten.app" src="https://plausible.io/js/script.js"></script> -->
 </head>
 
 <body data-cta-state="beta">
@@ -1153,6 +1171,7 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
       <a href="#terms">Terms</a>
       <a href="#imprint">Legal Notice</a>
       <a href="https://meringo.app" target="_blank" rel="noopener">Meringo Music ↗</a>
+      <a href="https://adamsiemaszko.com/" target="_blank" rel="noopener">Made by Adam Siemaszko ↗</a>
       <a href="mailto:support@meringo.app">support@meringo.app</a>
     </div>
 
