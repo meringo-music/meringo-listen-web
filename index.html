@@ -28,7 +28,7 @@
   "applicationCategory": "MultimediaApplication",
   "applicationSubCategory": "Audiobook Player",
   "operatingSystem": "Android 13+",
-  "description": "A premium Android audiobook player with first-class Audiobookshelf support, universal local-file playback (M4B, MP3, FLAC, OGG/Opus, AAC, WAV), a 64-bit 10-band voice EQ with curated spoken-word presets, per-narrator EQ memory, pitch-corrected speed up to 3x via libsonic, smart rewind, and a sleep-mode envelope. Local-first and privacy-respecting.",
+  "description": "A premium Android audiobook player with first-class Audiobookshelf support, universal local-file playback (M4B, MP3, FLAC, OGG/Opus, AAC, WAV), a 64-bit 10-band voice EQ with curated spoken-word presets, per-narrator EQ memory, pitch-corrected speed up to 3x, smart rewind, and a sleep-mode envelope. Local-first and privacy-respecting.",
   "publisher": {
     "@type": "Organization",
     "name": "Meringo Labs LLC",
@@ -579,7 +579,7 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
   <div class="spec-row">
     <div class="spec-item"><span class="spec-key">Platform</span><span class="spec-val">Android 13+</span></div>
     <div class="spec-item"><span class="spec-key">Voice EQ</span><span class="spec-val gold">64-bit · 10-band</span></div>
-    <div class="spec-item"><span class="spec-key">Speed</span><span class="spec-val violet">3× · libsonic</span></div>
+    <div class="spec-item"><span class="spec-key">Speed</span><span class="spec-val violet">3× · pitch-corrected</span></div>
     <div class="spec-item"><span class="spec-key">Sources</span><span class="spec-val">ABS + Local</span></div>
     <div class="spec-item"><span class="spec-key">Pricing</span><span class="spec-val gold">$14.99 once</span></div>
     <div class="spec-item"><span class="spec-key">Tracking</span><span class="spec-val violet">None</span></div>
@@ -724,16 +724,16 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
       <p class="chapter-num">Ch. 05 — Speed</p>
       <h2 class="chapter-title">3× that still <em>sounds like English.</em></h2>
       <p class="chapter-body">
-        Meringo Listen uses <strong>libsonic</strong> — the AOSP speech-optimised time-stretch, engineered by Bill Cox specifically for listening above 2×. Below 2× it leans on a high-quality WSOLA variant; at 2× and up it switches to a pitch-period algorithm that keeps sibilants crisp and dramatic pauses intact.
+        Meringo Listen changes speed with <strong>Media3's Sonic time-stretch</strong> — the Sonic algorithm (originally Bill Cox's), which shifts tempo while holding pitch. A narrator keeps their natural voice, and their consonants stay crisp, all the way up to 3×.
       </p>
       <p class="chapter-body">
-        Most Android players run a music-app time-stretch that <em>smears</em> consonants at high speed. This one doesn't — and at 1.0× it's a clean passthrough, so nothing touches the audio you didn't ask it to.
+        Pitch correction is on at every speed, so voices never turn into chipmunks. And at 1.0× the time-stretch is a clean passthrough — nothing touches the audio you didn't ask it to, and the route badge says so.
       </p>
       <div class="chapter-specs">
         <span class="chapter-spec-tag">0.5× – 3.0×</span>
-        <span class="chapter-spec-tag gold">libsonic</span>
+        <span class="chapter-spec-tag gold">Media3 Sonic</span>
         <span class="chapter-spec-tag violet">Pitch-corrected</span>
-        <span class="chapter-spec-tag">20–31 ms latency</span>
+        <span class="chapter-spec-tag">1.0× passthrough</span>
       </div>
     </div>
     <div class="chapter-stage">
