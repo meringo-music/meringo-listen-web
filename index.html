@@ -67,7 +67,7 @@
   "mainEntity": [
     {"@type":"Question","name":"Can Meringo Listen play my Audible books?","acceptedAnswer":{"@type":"Answer","text":"No. Audible's AAX files are DRM-protected and Meringo Listen does not decode them — that's a deliberate, permanent choice, not a roadmap item. Meringo Listen is built for books you own DRM-free: downloaded from a retailer like Libro.fm, ripped yourself, or served from your own Audiobookshelf library. If your library lives in Audible, stay with Audible."}},
     {"@type":"Question","name":"Do I need an Audiobookshelf server to use it?","acceptedAnswer":{"@type":"Answer","text":"No. Point Meringo Listen at a folder of audiobooks and everything works — playback, chapters, voice EQ, speed, bookmarks, sleep timer. Audiobookshelf is a first-class option for people who self-host, not a requirement. Local files and Audiobookshelf sit on the same shelf."}},
-    {"@type":"Question","name":"Which audiobook formats does it play?","acceptedAnswer":{"@type":"Answer","text":"M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata, MP3 CHAP frames, and Audiobookshelf's server-provided chapter lists."}},
+    {"@type":"Question","name":"Which audiobook formats does it play?","acceptedAnswer":{"@type":"Answer","text":"M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata and MP3 CHAP frames."}},
     {"@type":"Question","name":"Is there a subscription?","acceptedAnswer":{"@type":"Answer","text":"No. $14.99 once, then it's yours — after a 14-day free trial of the full app. If you reinstall or switch phones, your purchase restores automatically against your Google account. No ads, no premium tier behind a second purchase."}},
     {"@type":"Question","name":"Does Meringo Listen track me?","acceptedAnswer":{"@type":"Answer","text":"No analytics SDK, no ad SDK, no engagement metrics, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default, and your server URLs are redacted before any crash payload leaves the device. Your Audiobookshelf server and optional Sentry are the only outbound connections."}},
     {"@type":"Question","name":"How is this different from Smart AudioBook Player or Voice?","acceptedAnswer":{"@type":"Answer","text":"Smart AudioBook Player has owned local-files Android for years and earned it, but its EQ and pitch controls sit behind a subscription and 2026 reviewers call the UI dated. Voice is excellent, free and FOSS, deliberately minimal — with no EQ. Meringo Listen is the paid, premium-aesthetic option with a 64-bit voice EQ, per-narrator memory, and first-class Audiobookshelf. Different trade-offs; all three can exist."}},
@@ -807,7 +807,7 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
         Pause for a meeting and Meringo Listen <strong>smart-rewinds</strong> to the last natural pause when you come back — far enough to find the sentence, not so far you re-hear a paragraph. Force-stop the app, reboot the phone, reinstall a week later: the queue, the position, the speed are all exactly where you left them, and it <em>waits for your tap</em> before any sound.
       </p>
       <p class="chapter-body">
-        Drift off with the <strong>Sleep Mode</strong> envelope — a gentle fade and screen-dim, end-of-chapter aware, that never nags. Drop a <strong>bookmark</strong> on a passage worth keeping; it stays on your device, exportable. <strong>Android Auto</strong> and chapter-aware Bluetooth controls come along for the drive.
+        Drift off with the <strong>Sleep Mode</strong> envelope — a gentle fade and screen-dim, end-of-chapter aware, that never nags. Drop a <strong>bookmark</strong> on a passage worth keeping; it stays on your device. <strong>Android Auto</strong> and chapter-aware Bluetooth controls come along for the drive.
       </p>
       <div class="chapter-specs">
         <span class="chapter-spec-tag gold">Smart rewind</span>
@@ -989,7 +989,7 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
       </details>
       <details class="faq-item">
         <summary>Which formats does it play?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
-        <div class="faq-body"><p>M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata, MP3 CHAP frames, and Audiobookshelf's server-provided chapter lists.</p></div>
+        <div class="faq-body"><p>M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata and MP3 CHAP frames.</p></div>
       </details>
       <details class="faq-item">
         <summary>Is there a subscription?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
