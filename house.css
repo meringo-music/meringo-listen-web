@@ -1,6 +1,7 @@
-/* house-kit 1.2 · house.css · 2026-10-09
+/* house-kit 1.3 · house.css · 2026-10-09
    1.1: the family row marks the current site with .h-here, not aria-current.
    1.2: 1.1's note closed this comment early and the .h-wrap rule was dropped.
+   1.3: the footer tagline is balanced (it left "listen." alone at 390 px).
 
    The house components. Linked after colors_and_type.css (and a room file)
    on meringo.app, meringolisten.app and adamsiemaszko.com. Minutes ports
@@ -164,7 +165,7 @@
   border-top: 1px solid var(--color-rule);
   font: 400 var(--t-small)/var(--lh-small) var(--font-ui); color: var(--color-text-1);
 }
-.h-tagline { margin: 0 0 var(--space-8); font: 500 22px/1.3 var(--font-display); color: var(--color-text-1); }
+.h-tagline { margin: 0 0 var(--space-8); font: 500 22px/1.3 var(--font-display); color: var(--color-text-1); text-wrap: balance; }
 .h-family { list-style: none; margin: 0 0 var(--space-4); padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-5); }
 .h-family li { display: inline-flex; align-items: center; min-height: 44px; }
 .h-labs { gap: 10px; font: 500 18px/1 var(--font-display); color: var(--color-text-0); }
