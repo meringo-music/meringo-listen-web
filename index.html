@@ -69,7 +69,7 @@
     {"@type":"Question","name":"Which audiobook formats does it play?","acceptedAnswer":{"@type":"Answer","text":"M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata and MP3 CHAP frames."}},
     {"@type":"Question","name":"Is there a subscription?","acceptedAnswer":{"@type":"Answer","text":"No. $14.99 once, then it's yours — after a 14-day free trial of the full app. If you reinstall or switch phones, your purchase restores automatically against your Google account. No ads, no premium tier behind a second purchase."}},
     {"@type":"Question","name":"Does Meringo Listen track me?","acceptedAnswer":{"@type":"Answer","text":"No analytics SDK, no ad SDK, no engagement metrics, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default, and your server URLs are redacted before any crash payload leaves the device. Apart from Google Play's own billing library, which handles the purchase, your Audiobookshelf server and optional Sentry are the only outbound connections."}},
-    {"@type":"Question","name":"How is this different from Smart AudioBook Player or Voice?","acceptedAnswer":{"@type":"Answer","text":"Smart AudioBook Player has owned local-files Android for years and earned it. Voice is excellent, free and FOSS, deliberately minimal — with no EQ. Meringo Listen is the paid, premium-aesthetic option with a 64-bit voice EQ, per-narrator memory, and first-class Audiobookshelf. Different trade-offs; all three can exist."}},
+    {"@type":"Question","name":"How is this different from Smart AudioBook Player or Voice?","acceptedAnswer":{"@type":"Answer","text":"Smart AudioBook Player is a long-running local-files player. Voice is excellent, free and FOSS, deliberately minimal — with no EQ. Meringo Listen is the paid, premium-aesthetic option with a 64-bit voice EQ, per-narrator memory, and first-class Audiobookshelf. Different trade-offs; all three can exist."}},
     {"@type":"Question","name":"Is it the official Audiobookshelf app?","acceptedAnswer":{"@type":"Answer","text":"No. Meringo Listen is an independent third-party client and is not affiliated with or endorsed by the Audiobookshelf project. The official client is free and will keep existing; this is a paid, native-Compose alternative for listeners who want a premium client. Your device talks directly to your server — nothing proxies through us."}},
     {"@type":"Question","name":"Can I stream from Dropbox, Google Drive, or OneDrive?","acceptedAnswer":{"@type":"Answer","text":"No. The source list is Audiobookshelf and local folders (via Android's Storage Access Framework)."}},
     {"@type":"Question","name":"Will there be an iOS version?","acceptedAnswer":{"@type":"Answer","text":"Not in the next twelve months. iOS Audiobookshelf listeners are already well served by Prologue, SoundLeaf, ShelfPlayer and AudioBooth. Meringo Listen is Android-first by deliberate choice."}},
@@ -189,14 +189,14 @@ p, li, dd { text-wrap: pretty; }
     <div class="l-body">
       <blockquote class="h-quote l-epigraph">
         <p><span class="h-hang">“</span>Last time you listened to Eleanor Voss. You used the Late Night preset. Restore it for this book?”</p>
-        <cite>Meringo Listen, when you start another book by the same reader</cite>
+        <cite>Meringo Listen asks this when a narrator’s saved preset isn’t the one playing.</cite>
       </blockquote>
-      <p class="h-lead l-lead">For people who own their books: local M4B and MP3, or your Audiobookshelf server. $14.99 once, after a 14-day free trial.</p>
+      <p class="h-lead l-lead">For people who own their books: local M4B and MP3, or your Audiobookshelf server. $14.99 once, after a 14-day free trial. Android 13 or newer.</p>
       <p class="l-act">
         <a class="h-btn cta-state-beta" href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">Request early access</a>
         <a class="h-btn cta-state-live" href="https://play.google.com/store/apps/details?id=app.meringo.listen">Get it on Google Play</a>
-        <span class="h-meta cta-state-beta">In closed testing ahead of its public launch.</span>
-        <span class="h-meta cta-state-live">For Android 13 or newer.</span>
+        <span class="h-meta cta-state-beta">In closed testing ahead of its public launch. Send the Google account you use on your phone to <a class="h-link" href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">support@meringo.app</a> and I’ll add you to the test.</span>
+        <span class="h-meta cta-state-live">On Google Play.</span>
       </p>
     </div>
   </div>
@@ -209,7 +209,7 @@ p, li, dd { text-wrap: pretty; }
 <nav class="h-wrap l-contents" aria-labelledby="contents-title">
   <h2 id="contents-title">Contents, read aloud at 150 words a minute</h2>
   <ol class="h-contents">
-    <li><a href="#chapter-1"><span class="h-ch">Ch. 01</span><span class="h-title">The Shelf</span><span class="h-time">0:39</span></a></li>
+    <li><a href="#chapter-1"><span class="h-ch">Ch. 01</span><span class="h-title">The Shelf</span><span class="h-time">0:42</span></a></li>
     <li><a href="#chapter-2"><span class="h-ch">Ch. 02</span><span class="h-title">Audiobookshelf</span><span class="h-time">0:48</span></a></li>
     <li><a href="#chapter-3"><span class="h-ch">Ch. 03</span><span class="h-title">The voice EQ</span><span class="h-time">0:56</span></a></li>
     <li><a href="#chapter-4"><span class="h-ch">Ch. 04</span><span class="h-title">Per-narrator memory</span><span class="h-time">0:29</span></a></li>
@@ -217,7 +217,7 @@ p, li, dd { text-wrap: pretty; }
     <li><a href="#chapter-6"><span class="h-ch">Ch. 06</span><span class="h-title">Listen anywhere</span><span class="h-time">0:58</span></a></li>
     <li><a href="#chapter-7"><span class="h-ch">Ch. 07</span><span class="h-title">Honest audio</span><span class="h-time">1:12</span></a></li>
     <li><a href="#fence"><span class="h-ch"></span><span class="h-title">Is it for you?</span><span class="h-time">1:14</span></a></li>
-    <li><a href="#faq"><span class="h-ch"></span><span class="h-title">Questions</span><span class="h-time">3:16</span></a></li>
+    <li><a href="#faq"><span class="h-ch"></span><span class="h-title">Questions</span><span class="h-time">3:14</span></a></li>
   </ol>
 </nav>
 
@@ -228,7 +228,7 @@ p, li, dd { text-wrap: pretty; }
     <h2 class="h-h2">The Shelf</h2>
     <div class="l-spread">
       <div class="h-prose">
-        <p>Point Meringo Listen at a folder of <strong>M4Bs and MP3s</strong>, sign into your <strong>Audiobookshelf</strong> server, or do both. Local files and server books land on the same shelf, sorted the way you actually listen: in-progress at the top, recently added next, finished in the long tail.</p>
+        <p>Point Meringo Listen at a folder of <strong>M4Bs and MP3s</strong>, sign into your <strong>Audiobookshelf</strong> server, or do both. Local files and server books land on the same shelf, sorted the way you actually listen: in-progress at the top, recently added next, finished in the long tail. Browse by author, series or what you played last.</p>
         <p>A small badge marks which copy is local and which is on the server, for the listener who cares about the difference. Everyone else just sees their library — calm, current, and exactly where they left it.</p>
       </div>
       <figure class="h-exhibit l-figure">
@@ -419,7 +419,7 @@ p, li, dd { text-wrap: pretty; }
     </details>
     <details class="h-details">
       <summary>How does it compare to Smart AudioBook Player or Voice?</summary>
-      <p>Smart AudioBook Player has owned local-files Android for years and earned it. Voice is excellent, free and FOSS, deliberately minimal — with no EQ. Meringo Listen is the paid, premium-aesthetic option with a 64-bit voice EQ, per-narrator memory, and first-class Audiobookshelf. Different trade-offs; all three can exist.</p>
+      <p>Smart AudioBook Player is a long-running local-files player. Voice is excellent, free and FOSS, deliberately minimal — with no EQ. Meringo Listen is the paid, premium-aesthetic option with a 64-bit voice EQ, per-narrator memory, and first-class Audiobookshelf. Different trade-offs; all three can exist.</p>
     </details>
     <details class="h-details">
       <summary>Is this the official Audiobookshelf app?</summary>
