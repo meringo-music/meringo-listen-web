@@ -2,27 +2,37 @@
 
 The marketing + legal site for **Meringo Listen**, served at **https://meringolisten.app**.
 
-It is a static, single-page site (no build step, no framework) — the same shape as
-[`meringo-web`](https://github.com/meringo-music/meringo-web), the Meringo Music site.
-Just HTML, one CSS file, self-hosted fonts, and screenshots.
+It is a static, single-page site (no build step, no framework), built on the Meringo Labs
+house kit like [`meringo-web`](https://github.com/meringo-music/meringo-web), the Meringo site.
+Just HTML, the kit's three CSS files, self-hosted fonts, and screenshots.
 
 ```
-index.html            # the whole page (inline <style> + <script>)
-colors_and_type.css   # design tokens + @font-face + type classes
+index.html            # the whole page; its own <style> holds page-only rules, no script
+404.html              # served by GitHub Pages for any missing path
+colors_and_type.css   # house kit: tokens, @font-face, type roles
+room-listen.css       # house kit: Listen's differences from the base
+house.css             # house kit: the h- components
 CNAME                 # meringolisten.app  (GitHub Pages custom domain)
 robots.txt · sitemap.xml
-assets/fonts/         # Cormorant Garamond · Outfit · JetBrains Mono (woff2)
-assets/screens/       # device screenshots (WebP + PNG fallback)
+assets/fonts/         # Cormorant Garamond · Inter · Share Tech Mono (woff2) + OFL.txt
+assets/img/           # listen-icon.svg (the launcher icon, also the favicon) · meringo-mark.svg
+assets/screens/       # app screenshots (WebP + PNG fallback)
 assets/og.png         # 1200x630 social card
-assets/logo.svg · logo-icon.svg
-tools/og/make_og.py   # regenerates assets/og.png (needs Pillow)
+tools/og/make_og.py   # regenerates assets/og.png (needs Pillow, fontTools, brotli)
 ```
+
+The three kit files, the fonts and the two marks are vendored byte for byte from the house
+kit (`meringo-labs/design/`, checked against its `MANIFEST.txt`). Never edit them here:
+change the kit, then copy them again.
 
 ## Preview locally
 
 ```powershell
-python -m http.server 8099    # then open http://127.0.0.1:8099
+python -m http.server 8102    # then open http://127.0.0.1:8102
 ```
+
+Serve the repo root: the pages use root paths (`/house.css`, `/assets/...`), so opening
+`index.html` straight from disk loads no styles.
 
 ## One-time hosting setup (mirrors meringo.app)
 
@@ -58,7 +68,7 @@ Then in GitHub Pages wait for "DNS check successful" and enable **Enforce HTTPS*
 (Porkbun's `ALIAS` type could flatten the apex to `meringo-music.github.io` instead of
 the four A records, but A records match Music exactly — prefer them. Leave email/MX alone.)
 
-## Launch day (target 2026-09-08): flip beta → live
+## Launch day: flip beta → live
 
 The site ships in **"Request access"** mode for closed testing. To switch to the live
 Google Play CTA when the app is public, change one attribute in `index.html`:
@@ -68,8 +78,12 @@ Google Play CTA when the app is public, change one attribute in `index.html`:
 ```
 
 That hides every `.cta-state-beta` element and shows the `.cta-state-live` ones
-(hero, nav, FAQ, get-app) — the Google Play button to
+(the title page, the header link, the FAQ and the get-it section): the Google Play button to
 `https://play.google.com/store/apps/details?id=app.meringo.listen`.
+
+The attribute can't switch what sits in `<head>`. Check these in the same change: the
+`<title>`, the meta description, the og and twitter tags, and the first JSON-LD block (its
+`offers.availability` is `PreOrder`, and it carries no `softwareVersion`).
 
 ## Play Console note
 
