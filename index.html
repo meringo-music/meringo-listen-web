@@ -244,7 +244,7 @@ nav {
 .spec-val.gold { color: var(--color-gold); } .spec-val.violet { color: var(--color-violet); }
 
 /* ───────────── CHAPTERS ───────────── */
-.chapter { padding: 120px var(--space-6); position: relative; }
+.chapter { padding: 120px var(--space-6); position: relative; overflow-x: clip; }
 .chapter-grid { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 6fr 6fr; gap: var(--space-16); align-items: center; }
 .chapter-grid.reverse .chapter-copy { order: 2; } .chapter-grid.reverse .chapter-stage { order: 1; }
 .chapter::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 1px; height: 60px; background: linear-gradient(to bottom, transparent, var(--color-gold)); opacity: 0.4; }
@@ -396,13 +396,13 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
-  .hero-grid { grid-template-columns: 1fr; gap: var(--space-12); }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-12); }
   .hero-stage { min-height: 460px; order: -1; }
   .hero-device-secondary, .hero-mascot { display: none; }
   .hero-spec-float { left: 0; bottom: 6%; }
   .spec-row { grid-template-columns: repeat(3, 1fr); gap: var(--space-4) 0; }
   .spec-item:nth-child(3)::before, .spec-item:nth-child(4)::before { display: none; }
-  .chapter-grid { grid-template-columns: 1fr; gap: var(--space-10); }
+  .chapter-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-10); }
   .chapter-grid.reverse .chapter-copy, .chapter-grid.reverse .chapter-stage { order: 0; }
   .chapter-stage { min-height: 420px; }
   .proof-inner { grid-template-columns: 1fr; gap: var(--space-8); }
@@ -416,8 +416,9 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
 @media (max-width: 560px) {
   .hero { padding-top: 96px; }
   .chapter, #faq, #get-app, .fence, .maker { padding-left: var(--space-5); padding-right: var(--space-5); }
-  .spec-row { grid-template-columns: repeat(2, 1fr); }
+  .spec-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .spec-item:nth-child(odd)::before { display: none; }
+  .spec-val { white-space: normal; text-wrap: balance; }
   .get-app-card { padding: var(--space-10) var(--space-5); }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-mascot { grid-column: 1; justify-self: start; }
@@ -470,7 +471,7 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
   <a href="#chapter-1">The tour</a>
   <a href="#fence">Is it for you?</a>
   <a href="#faq">FAQ</a>
-  <a href="#get-app">Get the app</a>
+  <a href="#get-app"><span class="cta-state-beta">Request access</span><span class="cta-state-live">Get the app</span></a>
 </div>
 
 <!-- ───────────── HERO ───────────── -->
@@ -1023,7 +1024,7 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
         <summary>How do I get it right now?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
         <div class="faq-body">
           <p class="cta-state-beta">Meringo Listen is in closed testing ahead of its public launch. To try it early, email <a href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">support@meringo.app</a> with the Google account email you'd use on the device, and Adam will add you to the test track.</p>
-          <p class="cta-state-live">Meringo Listen is on the Google Play Store — <a href="https://play.google.com/store/apps/details?id=app.meringo.listen" target="_blank" rel="noopener">install it here</a>. New listeners get a 14-day free trial of the full app, then a one-time $14.99 unlock.</p>
+          <p class="cta-state-live">Meringo Listen is on the Google Play Store — <a href="https://play.google.com/store/apps/details?id=app.meringo.listen" target="_blank" rel="noopener">install it here</a>. New listeners get a 14-day free trial of the full app, then a one-time $14.99 purchase.</p>
         </div>
       </details>
     </div>
@@ -1044,12 +1045,12 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
     </div>
     <p class="get-app-meta">14-DAY FREE TRIAL <span class="dot">·</span> $14.99 ONCE <span class="dot">·</span> NO SUBSCRIPTION</p>
     <p class="get-app-contact">Reach Adam at <a href="mailto:support@meringo.app">support@meringo.app</a></p>
-    <p class="sister">Meringo Listen's sister app — <a href="https://meringo.app" target="_blank" rel="noopener">Meringo Music, a bit-perfect player for your music library ↗</a></p>
+    <p class="sister">Meringo Listen's sister apps — <a href="https://meringo.app" target="_blank" rel="noopener">Meringo Music, a bit-perfect player for your music library ↗</a> and <a href="https://meringominutes.app" target="_blank" rel="noopener">Meringo Minutes, a meeting recorder for the Mac ↗</a></p>
   </div>
   <!-- LIVE STATE -->
   <div class="get-app-card cta-state-live">
     <h2 class="get-app-title">Your books. <em>Exactly as narrated.</em></h2>
-    <p class="get-app-body">A premium Android audiobook player for Audiobookshelf and your own files. Pay once, and nothing you unlock is ever taken away.</p>
+    <p class="get-app-body">A premium Android audiobook player for Audiobookshelf and your own files. Pay once, and nothing you buy is ever taken away.</p>
     <div class="get-app-cta">
       <a href="https://play.google.com/store/apps/details?id=app.meringo.listen" class="play-badge" target="_blank" rel="noopener">
         <svg class="play-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 2.5v19c0 .5.3.9.7 1.1.4.2.9.1 1.3-.1l16-9.5c.3-.2.5-.6.5-1s-.2-.8-.5-1l-16-9.5c-.2-.1-.5-.2-.7-.2-.7 0-1.3.6-1.3 1.2z"/></svg>
@@ -1058,7 +1059,7 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
     </div>
     <p class="get-app-meta">14-DAY FREE TRIAL <span class="dot">·</span> $14.99 ONCE <span class="dot">·</span> NO SUBSCRIPTION</p>
     <p class="get-app-contact">Support: <a href="mailto:support@meringo.app">support@meringo.app</a></p>
-    <p class="sister">Meringo Listen's sister app — <a href="https://meringo.app" target="_blank" rel="noopener">Meringo Music, a bit-perfect player for your music library ↗</a></p>
+    <p class="sister">Meringo Listen's sister apps — <a href="https://meringo.app" target="_blank" rel="noopener">Meringo Music, a bit-perfect player for your music library ↗</a> and <a href="https://meringominutes.app" target="_blank" rel="noopener">Meringo Minutes, a meeting recorder for the Mac ↗</a></p>
   </div>
 </section>
 
@@ -1171,11 +1172,12 @@ footer { border-top: 1px solid var(--color-border-dim); padding: var(--space-16)
     <div class="footer-links">
       <a href="#fence">Is it for you?</a>
       <a href="#faq">FAQ</a>
-      <a href="#get-app">Get the app</a>
+      <a href="#get-app"><span class="cta-state-beta">Request access</span><span class="cta-state-live">Get the app</span></a>
       <a href="#privacy">Privacy</a>
       <a href="#terms">Terms</a>
       <a href="#imprint">Legal Notice</a>
       <a href="https://meringo.app" target="_blank" rel="noopener">Meringo Music ↗</a>
+      <a href="https://meringominutes.app" target="_blank" rel="noopener">Meringo Minutes ↗</a>
       <a href="https://adamsiemaszko.com/" target="_blank" rel="noopener">Made by Adam Siemaszko ↗</a>
       <a href="mailto:support@meringo.app">support@meringo.app</a>
     </div>
