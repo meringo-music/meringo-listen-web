@@ -1,0 +1,17 @@
+/* house-kit 1 · room-listen.css · 2026-10-09
+   Meringo Listen's differences from the house base, from the Listen app's
+   own MeringoColors.kt (Meringo_Listen/core/design/.../theme/MeringoColors.kt).
+   Linked after colors_and_type.css on meringolisten.app only. */
+:root {
+  --color-text-2:         #9A8870;  /* ParchmentFaint (:52), raised for AA: 5.94:1 on the ground */
+  --color-border-default: #9A8870;
+  --color-gold-dim:       #9E6A28;  /* CandlelightDim (:33) */
+  --color-border-bright:  #9E6A28;
+  --color-teal:           #3A7E7E;  /* RuneTeal (:68) */
+  --color-error:          #E36A60;  /* EmberRed (:62) */
+
+  /* The book site sets its reading text in the serif (decision D8).
+     If Adam rules Inter at the specimen gate, delete these two lines. */
+  --font-body: var(--font-display);
+  --t-body:    20px;
+}
