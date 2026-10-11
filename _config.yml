@@ -1,0 +1,6 @@
+# GitHub Pages builds this repo with Jekyll. No page here has front matter,
+# so Jekyll copies each file as it is; this list keeps the repo's own notes
+# and tools off the site.
+exclude:
+  - DEPLOY.md
+  - tools
