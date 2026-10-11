@@ -34,8 +34,7 @@
     "name": "Meringo Labs LLC",
     "url": "https://meringolisten.app/",
     "sameAs": [
-      "https://meringo.app/",
-      "https://play.google.com/store/apps/details?id=app.meringo.listen"
+      "https://meringo.app/"
     ]
   },
   "url": "https://meringolisten.app/",
@@ -52,8 +51,6 @@
     "@type": "Offer",
     "price": "14.99",
     "priceCurrency": "USD",
-    "url": "https://play.google.com/store/apps/details?id=app.meringo.listen",
-    "availability": "https://schema.org/PreOrder",
     "category": "OneTimePurchase"
   }
 }
@@ -68,7 +65,7 @@
     {"@type":"Question","name":"Do I need an Audiobookshelf server to use it?","acceptedAnswer":{"@type":"Answer","text":"No. Point Meringo Listen at a folder of audiobooks and everything works — playback, chapters, voice EQ, speed, bookmarks, sleep timer. Audiobookshelf is a first-class option for people who self-host, not a requirement. Local files and Audiobookshelf sit on the same shelf."}},
     {"@type":"Question","name":"Which audiobook formats does it play?","acceptedAnswer":{"@type":"Answer","text":"M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata and MP3 CHAP frames."}},
     {"@type":"Question","name":"Is there a subscription?","acceptedAnswer":{"@type":"Answer","text":"No. $14.99 once, then it's yours — after a 14-day free trial of the full app. If you reinstall or switch phones, your purchase restores automatically against your Google account. No ads, no premium tier behind a second purchase."}},
-    {"@type":"Question","name":"Does Meringo Listen track me?","acceptedAnswer":{"@type":"Answer","text":"No analytics SDK, no ad SDK, no engagement metrics, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default, and your server URLs are redacted before any crash payload leaves the device. Apart from Google Play's own billing library, which handles the purchase, your Audiobookshelf server and optional Sentry are the only outbound connections."}},
+    {"@type":"Question","name":"Does Meringo Listen track me?","acceptedAnswer":{"@type":"Answer","text":"No analytics SDK, no ad SDK, no engagement metrics, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default, and your server URLs are redacted before any crash payload leaves the device. Apart from Google Play's own billing library, which checks your purchase each time the app starts, your Audiobookshelf server and optional Sentry are the only outbound connections."}},
     {"@type":"Question","name":"How is this different from Smart AudioBook Player or Voice?","acceptedAnswer":{"@type":"Answer","text":"Smart AudioBook Player is a long-running local-files player. Voice is excellent, free and FOSS, deliberately minimal — with no EQ. Meringo Listen is the paid, premium-aesthetic option with a 64-bit voice EQ, per-narrator memory, and first-class Audiobookshelf. Different trade-offs; all three can exist."}},
     {"@type":"Question","name":"Is it the official Audiobookshelf app?","acceptedAnswer":{"@type":"Answer","text":"No. Meringo Listen is an independent third-party client and is not affiliated with or endorsed by the Audiobookshelf project. The official client is free and will keep existing; this is a paid, native-Compose alternative for listeners who want a premium client. Your device talks directly to your server — nothing proxies through us."}},
     {"@type":"Question","name":"Can I stream from Dropbox, Google Drive, or OneDrive?","acceptedAnswer":{"@type":"Answer","text":"No. The source list is Audiobookshelf and local folders (via Android's Storage Access Framework)."}},
@@ -174,7 +171,7 @@ p, li, dd { text-wrap: pretty; }
       <ul>
         <li><a href="#fence">Is it for you?</a></li>
         <li><a href="#faq">Questions</a></li>
-        <li><a href="#get-app"><span class="cta-state-beta">Request access</span><span class="cta-state-live">Get the app</span></a></li>
+        <li><a href="#get-app"><span class="cta-state-beta">Request access</span></a></li>
       </ul>
     </nav>
   </div>
@@ -194,9 +191,7 @@ p, li, dd { text-wrap: pretty; }
       <p class="h-lead l-lead">For people who own their books: local M4B and MP3, or your Audiobookshelf server. $14.99 once, after a 14-day free trial. Android 13 or newer.</p>
       <p class="l-act">
         <a class="h-btn cta-state-beta" href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">Request early access</a>
-        <a class="h-btn cta-state-live" href="https://play.google.com/store/apps/details?id=app.meringo.listen">Get it on Google Play</a>
         <span class="h-meta cta-state-beta">In closed testing ahead of its public launch. Send the Google account you use on your phone to <a class="h-link" href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">support@meringo.app</a> and I’ll add you to the test.</span>
-        <span class="h-meta cta-state-live">On Google Play.</span>
       </p>
     </div>
   </div>
@@ -209,15 +204,15 @@ p, li, dd { text-wrap: pretty; }
 <nav class="h-wrap l-contents" aria-labelledby="contents-title">
   <h2 id="contents-title">Contents, read aloud at 150 words a minute</h2>
   <ol class="h-contents">
-    <li><a href="#chapter-1"><span class="h-ch">Ch. 01</span><span class="h-title">The Shelf</span><span class="h-time">0:42</span></a></li>
-    <li><a href="#chapter-2"><span class="h-ch">Ch. 02</span><span class="h-title">Audiobookshelf</span><span class="h-time">0:48</span></a></li>
+    <li><a href="#chapter-1"><span class="h-ch">Ch. 01</span><span class="h-title">The Shelf</span><span class="h-time">0:43</span></a></li>
+    <li><a href="#chapter-2"><span class="h-ch">Ch. 02</span><span class="h-title">Audiobookshelf</span><span class="h-time">0:42</span></a></li>
     <li><a href="#chapter-3"><span class="h-ch">Ch. 03</span><span class="h-title">The voice EQ</span><span class="h-time">0:56</span></a></li>
     <li><a href="#chapter-4"><span class="h-ch">Ch. 04</span><span class="h-title">Per-narrator memory</span><span class="h-time">0:29</span></a></li>
     <li><a href="#chapter-5"><span class="h-ch">Ch. 05</span><span class="h-title">Speed</span><span class="h-time">0:31</span></a></li>
-    <li><a href="#chapter-6"><span class="h-ch">Ch. 06</span><span class="h-title">Listen anywhere</span><span class="h-time">0:58</span></a></li>
+    <li><a href="#chapter-6"><span class="h-ch">Ch. 06</span><span class="h-title">Listen anywhere</span><span class="h-time">0:54</span></a></li>
     <li><a href="#chapter-7"><span class="h-ch">Ch. 07</span><span class="h-title">Honest audio</span><span class="h-time">1:12</span></a></li>
     <li><a href="#fence"><span class="h-ch"></span><span class="h-title">Is it for you?</span><span class="h-time">1:14</span></a></li>
-    <li><a href="#faq"><span class="h-ch"></span><span class="h-title">Questions</span><span class="h-time">3:14</span></a></li>
+    <li><a href="#faq"><span class="h-ch"></span><span class="h-title">Questions</span><span class="h-time">3:16</span></a></li>
   </ol>
 </nav>
 
@@ -229,7 +224,7 @@ p, li, dd { text-wrap: pretty; }
     <div class="l-spread">
       <div class="h-prose">
         <p>Point Meringo Listen at a folder of <strong>M4Bs and MP3s</strong>, sign into your <strong>Audiobookshelf</strong> server, or do both. Local files and server books land on the same shelf, sorted the way you actually listen: in-progress at the top, recently added next, finished in the long tail. Browse by author, series or what you played last.</p>
-        <p>A small badge marks which copy is local and which is on the server, for the listener who cares about the difference. Everyone else just sees their library — calm, current, and exactly where they left it.</p>
+        <p>Download a book from your server and its row shows the progress, then reads <strong>Offline</strong> once the book will play without a connection. The rest is just your library — calm, current, and exactly where you left it.</p>
       </div>
       <figure class="h-exhibit l-figure">
         <picture><source srcset="/assets/screens/bookshelf.webp" type="image/webp"><img src="/assets/screens/bookshelf.png" loading="lazy" decoding="async" width="750" height="1334" alt="Meringo Listen Bookshelf — 'In progress (3)' and 'Recently added (4)' shelves listing The Wandering Engineer, Letters from the Lighthouse, and The Cartographer's Hand"></picture>
@@ -247,7 +242,7 @@ p, li, dd { text-wrap: pretty; }
     <div class="l-spread">
       <div class="h-prose">
         <p>A premium, paid native Android client for <strong>Audiobookshelf</strong>, built in Compose with no web-shell seams. Real two-way position sync. Real offline downloads. <strong>Multi-library.</strong> And real conflict resolution: listening done offline is checked against your server before it is sent, and if another device has since got a minute or more further — <em>“your Audiobookshelf server is ahead of this device by 35&nbsp;min”</em> — you choose which place to keep.</p>
-        <p>Your bearer token is stored encrypted in the Android Keystore, and your device talks <strong>straight to your server</strong> — nothing proxies through us. Downloads land in the same on-disk layout the official client uses, so your files migrate cleanly.</p>
+        <p>Your bearer token is stored encrypted in the Android Keystore, and your device talks <strong>straight to your server</strong> — nothing proxies through us.</p>
       </div>
       <figure class="h-exhibit l-figure">
         <picture><source srcset="/assets/screens/abs_servers.webp" type="image/webp"><img src="/assets/screens/abs_servers.png" loading="lazy" decoding="async" width="750" height="1334" alt="Meringo Listen — the Audiobookshelf servers screen with an Add a server button"></picture>
@@ -311,7 +306,7 @@ p, li, dd { text-wrap: pretty; }
     <div class="l-spread">
       <div class="h-prose">
         <p>Pause for a meeting and Meringo Listen <strong>smart-rewinds</strong> to the last natural pause when you come back — far enough to find the sentence, not so far you re-hear a paragraph. Force-stop the app or reboot the phone: the queue, the position, the speed are all exactly where you left them, and it waits for a press of play before any sound: yours, or the one some cars send as they connect.</p>
-        <p>Drift off with the <strong>Sleep Mode</strong> envelope — a gentle fade that can wait for the end of the chapter, and a screen that dims as a timed countdown runs out — that never nags. Drop a <strong>bookmark</strong> on a passage worth keeping; it stays on your device. <strong>Android Auto</strong> and chapter-aware Bluetooth controls come along for the drive.</p>
+        <p>Drift off with the <strong>Sleep Mode</strong> envelope — a gentle fade, and a screen that dims as a timed countdown runs out — that never nags. Drop a <strong>bookmark</strong> on a passage worth keeping; it stays on your device. <strong>Android Auto</strong> and chapter-aware Bluetooth controls come along for the drive.</p>
       </div>
       <figure class="h-exhibit l-figure">
         <picture><source srcset="/assets/screens/bookmarks.webp" type="image/webp"><img src="/assets/screens/bookmarks.png" loading="lazy" decoding="async" width="750" height="1334" alt="Meringo Listen bookmarks sheet — 'Add bookmark here, saves at 0:45', with a note that bookmarks stay on this device with no cloud round-trip"></picture>
@@ -328,7 +323,7 @@ p, li, dd { text-wrap: pretty; }
     <h2 class="h-h2">Honest audio</h2>
     <div class="l-spread">
       <div class="h-prose">
-        <p>Tap the route badge and Meringo Listen tells you the truth about your audio path. When nothing is touching the bytes, it reads <strong>BIT-EXACT</strong>. Turn on speed, a compressor, or volume scaling and the badge decorates rather than lies — “Speed 2.5×”, “LRC Subway”, “Scaled −2&nbsp;dB”.</p>
+        <p>Tap the route badge and Meringo Listen tells you the truth about your audio path. When nothing is touching the bytes, it reads <strong>BIT-EXACT</strong>. Turn on speed, a compressor, or volume leveling and the badge decorates rather than lies — “Speed 2.5×”, “LRC Subway”, “Leveling −2.1&nbsp;dB”.</p>
         <p>For most audiobooks this is a quiet detail. For the listener who imported a <strong>24-bit / 96&nbsp;kHz</strong> audio-drama production, it’s the whole point — the same honest engine, and the same route badge, that ships in Meringo, the sister music player.</p>
       </div>
       <figure class="h-exhibit l-figure">
@@ -415,7 +410,7 @@ p, li, dd { text-wrap: pretty; }
     </details>
     <details class="h-details">
       <summary>Does it track me?</summary>
-      <p>No analytics SDK, no ad SDK, no engagement metrics, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default, and your server URLs are redacted before any crash payload leaves the device. Apart from Google Play’s own billing library, which handles the purchase, your Audiobookshelf server and optional Sentry are the only outbound connections.</p>
+      <p>No analytics SDK, no ad SDK, no engagement metrics, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default, and your server URLs are redacted before any crash payload leaves the device. Apart from Google Play’s own billing library, which checks your purchase each time the app starts, your Audiobookshelf server and optional Sentry are the only outbound connections.</p>
     </details>
     <details class="h-details">
       <summary>How does it compare to Smart AudioBook Player or Voice?</summary>
@@ -441,7 +436,6 @@ p, li, dd { text-wrap: pretty; }
       <summary>How do I get it right now?</summary>
       <div>
         <p class="cta-state-beta">Meringo Listen is in closed testing ahead of its public launch. To try it early, email <a href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">support@meringo.app</a> with the Google account email you’d use on the device, and Adam will add you to the test track.</p>
-        <p class="cta-state-live">Meringo Listen is on <a href="https://play.google.com/store/apps/details?id=app.meringo.listen">Google Play</a>. New listeners get a 14-day free trial of the full app, then a one-time $14.99 purchase.</p>
       </div>
     </details>
   </div>
@@ -450,22 +444,14 @@ p, li, dd { text-wrap: pretty; }
 <!-- ───────────── GET THE APP ───────────── -->
 <section class="l-get h-plate" id="get-app">
   <div class="h-wrap">
-    <!-- BETA STATE -->
+    <!-- BETA STATE. The live copy is not in this file until the flip, so
+         nothing that reads the HTML without its CSS can find it. -->
     <div class="cta-state-beta">
-      <h2 class="h-h2">Closed testing is open.</h2>
-      <p>Meringo Listen is on its way to the Play Store. The closed-testing track is open now — install the real app, bring your own books or your Audiobookshelf server, and tell me what breaks.</p>
+      <h2 class="h-h2">Request early access.</h2>
+      <p>Meringo Listen is in closed testing ahead of its public launch. Send the Google account you use on your phone to <a href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">support@meringo.app</a> and I’ll add you to the test.</p>
       <p class="l-act"><a class="h-btn" href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">Request early access</a></p>
       <p class="h-meta">A 14-day free trial, then $14.99 once. No subscription.</p>
       <p>Reach Adam at <a href="mailto:support@meringo.app">support@meringo.app</a></p>
-      <p>Meringo Listen’s sister apps: <a href="https://meringo.app/">Meringo</a>, a bit-perfect player for your music library, and <a href="https://meringominutes.app/">Meringo Minutes</a>, a meeting recorder for the Mac.</p>
-    </div>
-    <!-- LIVE STATE -->
-    <div class="cta-state-live">
-      <h2 class="h-h2">Your books. Exactly as narrated.</h2>
-      <p>A premium Android audiobook player for Audiobookshelf and your own files. Pay once, and nothing you buy is ever taken away.</p>
-      <p class="l-act"><a class="h-btn" href="https://play.google.com/store/apps/details?id=app.meringo.listen">Get it on Google Play</a></p>
-      <p class="h-meta">A 14-day free trial, then $14.99 once. No subscription.</p>
-      <p>Support: <a href="mailto:support@meringo.app">support@meringo.app</a></p>
       <p>Meringo Listen’s sister apps: <a href="https://meringo.app/">Meringo</a>, a bit-perfect player for your music library, and <a href="https://meringominutes.app/">Meringo Minutes</a>, a meeting recorder for the Mac.</p>
     </div>
   </div>
@@ -475,10 +461,10 @@ p, li, dd { text-wrap: pretty; }
 <section class="l-legal" id="privacy">
   <div class="h-wrap">
     <h2 class="h-h2">Privacy Policy</h2>
-    <p class="h-meta">Last updated 2026-10-08 · Meringo Labs LLC</p>
+    <p class="h-meta">Last updated 2026-10-11 · Meringo Labs LLC</p>
 
     <h3 class="h-h3">The short version</h3>
-    <p>Meringo Listen is built local-first. It has <strong>no analytics, no ads, and no engagement tracking</strong>. The only data that ever leaves your device is (1) traffic to the Audiobookshelf server you choose to connect, (2) optional crash reports, which are off by default, and (3) what Google Play’s billing library exchanges with Google when you buy the app or restore your purchase. We never see your books, your listening, or your identity.</p>
+    <p>Meringo Listen is built local-first. It has <strong>no analytics, no ads, and no engagement tracking</strong>. The only data that ever leaves your device is (1) traffic to the Audiobookshelf server you choose to connect, (2) optional crash reports, which are off by default, and (3) what Google Play’s billing library exchanges with Google Play: it checks your purchase each time the app starts, and handles buying and restoring it. We never see your books, your listening, or your identity.</p>
 
     <h3 class="h-h3">Your audiobooks &amp; local files</h3>
     <p>When you add a folder, Android’s Storage Access Framework grants Meringo Listen read access to <strong>only that folder</strong>. Your audio never leaves the device — there is no upload, no scan sent anywhere, no cover-art lookup that transmits your files.</p>
@@ -487,15 +473,17 @@ p, li, dd { text-wrap: pretty; }
     <p>If you connect an Audiobookshelf server, your device talks <strong>directly to that server</strong> to stream, download, and sync your position. The connection is encrypted when your server’s address starts with https://. A server on plain http://, common on a home network, works too, but that connection is not encrypted. Your access token is stored encrypted in the Android Keystore. Nothing is proxied through Meringo Labs, and your server’s address is never shared with us.</p>
 
     <h3 class="h-h3">Crash reports (opt-in)</h3>
-    <p>Crash reporting via Sentry is <strong>opt-in and off by default</strong>. If you turn it on and the app crashes, the report contains the stack trace and the app’s version, plus the state of the device at that moment: its model, Android version and build, language and time zone, battery level and whether it was charging, free memory and storage, connection type (Wi-Fi or mobile data), screen size, the permissions the app holds, the screen that was open, and whether the app came from Google Play.</p>
+    <p>Crash reporting via Sentry is <strong>opt-in and off by default</strong>. If you turn it on and the app crashes, the report contains the stack trace and the app’s version, plus the state of the device at that moment: its model and processor, Android version, build and build ID, kernel version, whether it is rooted, when it last started up, language and time zone, battery level and temperature and whether it was charging, free memory and storage, connection type (Wi-Fi or mobile data), screen size, the permissions the app holds, the screen that was open, and whether the app came from Google Play.</p>
     <p>Sentry gives each installation a random ID so that repeat crashes from one device are counted together. It is not your advertising ID, and it is not tied to your name or any account. Sentry is set not to store IP addresses, so reports carry no location. Your <strong>server URLs are redacted</strong> before any payload leaves the device, and reports never include book titles, listening positions, or account tokens.</p>
-    <p>You can turn crash reports off at any time. To request deletion of any crash data, write to <a href="mailto:support@meringo.app">support@meringo.app</a>.</p>
+    <p>While crash reports are on, the app also sends Sentry a short session record each time it opens: the installation ID, the app’s version, how long the session lasted and whether it ended in a crash. Sentry uses these to count crash-free sessions.</p>
+    <p>From version 1.2.1 you can turn crash reports off at any time, in Settings → Crash reports; earlier test builds have no switch for it. To request deletion of any crash data, write to <a href="mailto:support@meringo.app">support@meringo.app</a>.</p>
 
     <h3 class="h-h3">Purchases through Google Play</h3>
-    <p>Buying Meringo Listen and restoring your purchase go through Google Play. Google’s billing library is part of the app and communicates with Google to do this, under <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>. For our accounts, Google gives us a record of each sale, including the order number, the price, and the buyer’s country, region and postal code.</p>
+    <p>Buying Meringo Listen and restoring your purchase go through Google Play. Google’s billing library is part of the app. It connects to Google Play each time the app starts, to check your purchase, and again when you buy or restore it, under <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>. For our accounts, Google gives us a record of each sale, including the order number, the price, and the buyer’s country, region and postal code.</p>
 
     <h3 class="h-h3">What we never collect</h3>
-    <p>No advertising ID, no device fingerprint, no account, no contacts, no location, no microphone, no listening history sent off-device. There is no recommendation engine and no social feed by design.</p>
+    <p>No advertising ID, no account, no contacts, no location, no microphone, and no listening history. There is no recommendation engine and no social feed by design.</p>
+    <p>The one identifier that can reach us is Sentry’s random installation ID, and only while crash reports are on. It is what Google Play’s data-safety section means by “Device or other IDs”, and the crash reports are what it files under “Analytics”.</p>
 
     <h3 class="h-h3">Your rights</h3>
     <p>Uninstalling Meringo Listen removes all local data (folder permissions are released; Keystore entries are dropped). EU/EEA users may lodge a complaint with their national data-protection authority; California residents may contact the California Attorney General. For any privacy question, write to <a href="mailto:support@meringo.app">support@meringo.app</a>.</p>
