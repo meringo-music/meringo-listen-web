@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meringo Listen — Your books, exactly as narrated.</title>
-<meta name="description" content="A premium Android audiobook player for people who own their books. Audiobookshelf + local M4B/MP3, a real 10-band voice EQ, pitch-corrected 3× speed, per-narrator memory. $14.99 once — no subscription, no ads, no tracking.">
+<meta name="description" content="A premium Android audiobook player for people who own their books. Audiobookshelf + local M4B/MP3, a real 10-band voice EQ, pitch-corrected 3× speed, per-narrator memory. $14.99 once on Google Play, after a 14-day free trial — no subscription, no ads, no tracking.">
 <meta property="og:title" content="Meringo Listen — Your books, exactly as narrated.">
-<meta property="og:description" content="A premium Android audiobook player. Audiobookshelf + local M4B/MP3, a real voice EQ, 3× speed that still sounds like English. $14.99 once — no subscription.">
+<meta property="og:description" content="A premium Android audiobook player. Audiobookshelf + local M4B/MP3, a real voice EQ, 3× speed that still sounds like English. $14.99 once on Google Play, after a 14-day free trial — no subscription.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://meringolisten.app/">
 <meta property="og:image" content="https://meringolisten.app/assets/og.png">
@@ -16,7 +16,7 @@
 <meta property="og:image:alt" content="Meringo Listen — a premium Android audiobook player for Audiobookshelf and your own files">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Meringo Listen — Your books, exactly as narrated.">
-<meta name="twitter:description" content="A premium Android audiobook player. Audiobookshelf + local M4B/MP3, a real voice EQ, 3× speed that still sounds like English. $14.99 once — no subscription.">
+<meta name="twitter:description" content="A premium Android audiobook player. Audiobookshelf + local M4B/MP3, a real voice EQ, 3× speed that still sounds like English. $14.99 once on Google Play, after a 14-day free trial — no subscription.">
 <meta name="twitter:image" content="https://meringolisten.app/assets/og.png">
 <meta name="twitter:image:alt" content="Meringo Listen — a premium Android audiobook player for Audiobookshelf and your own files">
 
@@ -28,6 +28,7 @@
   "applicationCategory": "MultimediaApplication",
   "applicationSubCategory": "Audiobook Player",
   "operatingSystem": "Android 13+",
+  "softwareVersion": "1.2.1",
   "description": "A premium Android audiobook player with first-class Audiobookshelf support, universal local-file playback (M4B, MP3, FLAC, OGG/Opus, AAC, WAV), a 64-bit 10-band voice EQ with curated spoken-word presets, per-narrator EQ memory, pitch-corrected speed up to 3x, smart rewind, and a sleep-mode envelope. Local-first and privacy-respecting.",
   "publisher": {
     "@type": "Organization",
@@ -38,6 +39,9 @@
     ]
   },
   "url": "https://meringolisten.app/",
+  "sameAs": [
+    "https://play.google.com/store/apps/details?id=app.meringo.listen"
+  ],
   "author": {
     "@type": "Person",
     "name": "Adam Siemaszko",
@@ -51,6 +55,8 @@
     "@type": "Offer",
     "price": "14.99",
     "priceCurrency": "USD",
+    "url": "https://play.google.com/store/apps/details?id=app.meringo.listen",
+    "availability": "https://schema.org/InStock",
     "category": "OneTimePurchase"
   }
 }
@@ -63,7 +69,7 @@
   "mainEntity": [
     {"@type":"Question","name":"Can Meringo Listen play my Audible books?","acceptedAnswer":{"@type":"Answer","text":"No. Audible's AAX files are DRM-protected and Meringo Listen does not decode them — that's a deliberate, permanent choice, not a roadmap item. Meringo Listen is built for books you own DRM-free: downloaded from a retailer like Libro.fm, ripped yourself, or served from your own Audiobookshelf library. If your library lives in Audible, stay with Audible."}},
     {"@type":"Question","name":"Do I need an Audiobookshelf server to use it?","acceptedAnswer":{"@type":"Answer","text":"No. Point Meringo Listen at a folder of audiobooks and everything works — playback, chapters, voice EQ, speed, bookmarks, sleep timer. Audiobookshelf is a first-class option for people who self-host, not a requirement. Local files and Audiobookshelf sit on the same shelf."}},
-    {"@type":"Question","name":"Which audiobook formats does it play?","acceptedAnswer":{"@type":"Answer","text":"M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata and MP3 CHAP frames."}},
+    {"@type":"Question","name":"Which audiobook formats does it play?","acceptedAnswer":{"@type":"Answer","text":"M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata, MP3 CHAP frames, and Audiobookshelf's server-provided chapter lists."}},
     {"@type":"Question","name":"Is there a subscription?","acceptedAnswer":{"@type":"Answer","text":"No. $14.99 once, then it's yours — after a 14-day free trial of the full app. If you reinstall or switch phones, your purchase restores automatically against your Google account. No ads, no premium tier behind a second purchase."}},
     {"@type":"Question","name":"Does Meringo Listen track me?","acceptedAnswer":{"@type":"Answer","text":"No analytics SDK, no ad SDK, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default. With them on, Sentry also learns each time the app is opened and how long it stays open, to count crash-free sessions — no screens, taps, books or listening. Your server URLs are redacted before any crash payload leaves the device. Apart from Google Play's own billing library, which checks your purchase each time the app starts, your Audiobookshelf server and optional Sentry are the only outbound connections."}},
     {"@type":"Question","name":"How is this different from Smart AudioBook Player or Voice?","acceptedAnswer":{"@type":"Answer","text":"Smart AudioBook Player is a long-running local-files player. Voice is excellent, free and FOSS, deliberately minimal — with no EQ. Meringo Listen is the paid, premium-aesthetic option with a 64-bit voice EQ, per-narrator memory, and first-class Audiobookshelf. Different trade-offs; all three can exist."}},
@@ -158,7 +164,7 @@ p, li, dd { text-wrap: pretty; }
 </style>
 </head>
 
-<body data-cta-state="beta">
+<body data-cta-state="live">
 <a class="h-skip" href="#content">Skip to content</a>
 <div class="h-thread"></div>
 <header class="h-header">
@@ -171,7 +177,7 @@ p, li, dd { text-wrap: pretty; }
       <ul>
         <li><a href="#fence">Is it for you?</a></li>
         <li><a href="#faq">Questions</a></li>
-        <li><a href="#get-app"><span class="cta-state-beta">Request access</span></a></li>
+        <li><a href="#get-app"><span class="cta-state-live">Get the app</span></a></li>
       </ul>
     </nav>
   </div>
@@ -190,15 +196,15 @@ p, li, dd { text-wrap: pretty; }
       </blockquote>
       <p class="h-lead l-lead">For people who own their books: local M4B and MP3, or your Audiobookshelf server. $14.99 once, after a 14-day free trial. Android 13 or newer.</p>
       <p class="l-act">
-        <a class="h-btn cta-state-beta" href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">Request early access</a>
-        <span class="h-meta cta-state-beta">In closed testing ahead of its public launch. Send the Google account you use on your phone to <a class="h-link" href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">support@meringo.app</a> and I’ll add you to the test.</span>
+        <a class="h-btn cta-state-live" href="https://play.google.com/store/apps/details?id=app.meringo.listen&amp;referrer=utm_source%3Dmeringolisten.app%26utm_medium%3Dweb%26utm_campaign%3Dhome_hero">Get it on Google Play</a>
+        <span class="h-meta cta-state-live">On Google Play.</span>
       </p>
     </div>
   </div>
 </section>
 
 <!-- ───────────── CONTENTS ───────────── -->
-<!-- Read-aloud times: the words in each section as the beta page shows them
+<!-- Read-aloud times: the words in each section as the page shows them
      (headings, captions and every FAQ answer included), at 150 words a
      minute, rounded to the nearest second. Recount when a section changes. -->
 <nav class="h-wrap l-contents" aria-labelledby="contents-title">
@@ -209,10 +215,10 @@ p, li, dd { text-wrap: pretty; }
     <li><a href="#chapter-3"><span class="h-ch">Ch. 03</span><span class="h-title">The voice EQ</span><span class="h-time">0:56</span></a></li>
     <li><a href="#chapter-4"><span class="h-ch">Ch. 04</span><span class="h-title">Per-narrator memory</span><span class="h-time">0:29</span></a></li>
     <li><a href="#chapter-5"><span class="h-ch">Ch. 05</span><span class="h-title">Speed</span><span class="h-time">0:31</span></a></li>
-    <li><a href="#chapter-6"><span class="h-ch">Ch. 06</span><span class="h-title">Listen anywhere</span><span class="h-time">0:54</span></a></li>
+    <li><a href="#chapter-6"><span class="h-ch">Ch. 06</span><span class="h-title">Listen anywhere</span><span class="h-time">0:58</span></a></li>
     <li><a href="#chapter-7"><span class="h-ch">Ch. 07</span><span class="h-title">Honest audio</span><span class="h-time">1:12</span></a></li>
     <li><a href="#fence"><span class="h-ch"></span><span class="h-title">Is it for you?</span><span class="h-time">1:14</span></a></li>
-    <li><a href="#faq"><span class="h-ch"></span><span class="h-title">Questions</span><span class="h-time">3:26</span></a></li>
+    <li><a href="#faq"><span class="h-ch"></span><span class="h-title">Questions</span><span class="h-time">3:22</span></a></li>
   </ol>
 </nav>
 
@@ -306,7 +312,7 @@ p, li, dd { text-wrap: pretty; }
     <div class="l-spread">
       <div class="h-prose">
         <p>Pause for a meeting and Meringo Listen <strong>smart-rewinds</strong> to the last natural pause when you come back — far enough to find the sentence, not so far you re-hear a paragraph. Force-stop the app or reboot the phone: the queue, the position, the speed are all exactly where you left them, and it waits for a press of play before any sound: yours, or the one some cars send as they connect.</p>
-        <p>Drift off with the <strong>Sleep Mode</strong> envelope — a gentle fade, and a screen that dims as a timed countdown runs out — that never nags. Drop a <strong>bookmark</strong> on a passage worth keeping; it stays on your device. <strong>Android Auto</strong> and chapter-aware Bluetooth controls come along for the drive.</p>
+        <p>Drift off with the <strong>Sleep Mode</strong> envelope — a gentle fade that can wait for the end of the chapter, and a screen that dims as a timed countdown runs out — that never nags. Drop a <strong>bookmark</strong> on a passage worth keeping; it stays on your device. <strong>Android Auto</strong> and chapter-aware Bluetooth controls come along for the drive.</p>
       </div>
       <figure class="h-exhibit l-figure">
         <picture><source srcset="/assets/screens/bookmarks.webp" type="image/webp"><img src="/assets/screens/bookmarks.png" loading="lazy" decoding="async" width="750" height="1334" alt="Meringo Listen bookmarks sheet — 'Add bookmark here, saves at 0:45', with a note that bookmarks stay on this device with no cloud round-trip"></picture>
@@ -402,7 +408,7 @@ p, li, dd { text-wrap: pretty; }
     </details>
     <details class="h-details">
       <summary>Which formats does it play?</summary>
-      <p>M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata and MP3 CHAP frames.</p>
+      <p>M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata, MP3 CHAP frames, and Audiobookshelf’s server-provided chapter lists.</p>
     </details>
     <details class="h-details">
       <summary>Is there a subscription?</summary>
@@ -435,7 +441,7 @@ p, li, dd { text-wrap: pretty; }
     <details class="h-details">
       <summary>How do I get it right now?</summary>
       <div>
-        <p class="cta-state-beta">Meringo Listen is in closed testing ahead of its public launch. To try it early, email <a href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">support@meringo.app</a> with the Google account email you’d use on the device, and Adam will add you to the test track.</p>
+        <p class="cta-state-live">Meringo Listen is on <a href="https://play.google.com/store/apps/details?id=app.meringo.listen&amp;referrer=utm_source%3Dmeringolisten.app%26utm_medium%3Dweb%26utm_campaign%3Dfaq_get">Google Play</a>. New listeners get a 14-day free trial of the full app, then a one-time $14.99 purchase.</p>
       </div>
     </details>
   </div>
@@ -444,14 +450,14 @@ p, li, dd { text-wrap: pretty; }
 <!-- ───────────── GET THE APP ───────────── -->
 <section class="l-get h-plate" id="get-app">
   <div class="h-wrap">
-    <!-- BETA STATE. The live copy is not in this file until the flip, so
-         nothing that reads the HTML without its CSS can find it. -->
-    <div class="cta-state-beta">
-      <h2 class="h-h2">Request early access.</h2>
-      <p>Meringo Listen is in closed testing ahead of its public launch. Send the Google account you use on your phone to <a href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">support@meringo.app</a> and I’ll add you to the test.</p>
-      <p class="l-act"><a class="h-btn" href="mailto:support@meringo.app?subject=Meringo%20Listen%20testing%20access">Request early access</a></p>
+    <!-- LIVE STATE. The beta copy came out with the flip, so nothing that
+         reads the HTML without its CSS finds the old state either. -->
+    <div class="cta-state-live">
+      <h2 class="h-h2">Your books. Exactly as narrated.</h2>
+      <p>A premium Android audiobook player for Audiobookshelf and your own files. Pay once, and nothing you buy is ever taken away.</p>
+      <p class="l-act"><a class="h-btn" href="https://play.google.com/store/apps/details?id=app.meringo.listen&amp;referrer=utm_source%3Dmeringolisten.app%26utm_medium%3Dweb%26utm_campaign%3Dhome_getapp">Get it on Google Play</a></p>
       <p class="h-meta">A 14-day free trial, then $14.99 once. No subscription.</p>
-      <p>Reach Adam at <a href="mailto:support@meringo.app">support@meringo.app</a></p>
+      <p>Support: <a href="mailto:support@meringo.app">support@meringo.app</a></p>
       <p>Meringo Listen’s sister apps: <a href="https://meringo.app/">Meringo</a>, a bit-perfect player for your music library, and <a href="https://meringominutes.app/">Meringo Minutes</a>, a note-taking app for meetings, on the Mac.</p>
     </div>
   </div>

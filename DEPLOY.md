@@ -76,12 +76,15 @@ the four A records, but A records match Music exactly — prefer them. Leave ema
 
 ## Launch day: flip beta → live
 
-The site ships in **"Request access"** mode for closed testing, and `index.html` holds only
-the beta copy. The live copy is kept out of the file, not hidden: a page that hides it with
+**Done with 1.2.1** (board action A9783a): `index.html` now holds only the live copy. This
+section stays as the record of what the flip changed.
+
+The site shipped in **"Request access"** mode for closed testing, and `index.html` held only
+the beta copy. The live copy was kept out of the file, not hidden: a page that hides it with
 CSS still says "on Google Play" to anything that reads the HTML without its styles, which is
 how search engines and AI assistants read it.
 
-The flip is one PR, merged only once Google Play shows the release. It does all of this:
+The flip was one PR, merged only once Google Play showed the release. It did all of this:
 
 1. The attribute:
 
