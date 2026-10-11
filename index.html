@@ -65,7 +65,7 @@
     {"@type":"Question","name":"Do I need an Audiobookshelf server to use it?","acceptedAnswer":{"@type":"Answer","text":"No. Point Meringo Listen at a folder of audiobooks and everything works — playback, chapters, voice EQ, speed, bookmarks, sleep timer. Audiobookshelf is a first-class option for people who self-host, not a requirement. Local files and Audiobookshelf sit on the same shelf."}},
     {"@type":"Question","name":"Which audiobook formats does it play?","acceptedAnswer":{"@type":"Answer","text":"M4B, MP3 (including ID3v2 CHAP chapter frames), M4A, AAC, OGG/Opus, FLAC, and WAV. Chapter navigation works from container metadata and MP3 CHAP frames."}},
     {"@type":"Question","name":"Is there a subscription?","acceptedAnswer":{"@type":"Answer","text":"No. $14.99 once, then it's yours — after a 14-day free trial of the full app. If you reinstall or switch phones, your purchase restores automatically against your Google account. No ads, no premium tier behind a second purchase."}},
-    {"@type":"Question","name":"Does Meringo Listen track me?","acceptedAnswer":{"@type":"Answer","text":"No analytics SDK, no ad SDK, no engagement metrics, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default, and your server URLs are redacted before any crash payload leaves the device. Apart from Google Play's own billing library, which checks your purchase each time the app starts, your Audiobookshelf server and optional Sentry are the only outbound connections."}},
+    {"@type":"Question","name":"Does Meringo Listen track me?","acceptedAnswer":{"@type":"Answer","text":"No analytics SDK, no ad SDK, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default. With them on, Sentry also learns each time the app is opened and how long it stays open, to count crash-free sessions — no screens, taps, books or listening. Your server URLs are redacted before any crash payload leaves the device. Apart from Google Play's own billing library, which checks your purchase each time the app starts, your Audiobookshelf server and optional Sentry are the only outbound connections."}},
     {"@type":"Question","name":"How is this different from Smart AudioBook Player or Voice?","acceptedAnswer":{"@type":"Answer","text":"Smart AudioBook Player is a long-running local-files player. Voice is excellent, free and FOSS, deliberately minimal — with no EQ. Meringo Listen is the paid, premium-aesthetic option with a 64-bit voice EQ, per-narrator memory, and first-class Audiobookshelf. Different trade-offs; all three can exist."}},
     {"@type":"Question","name":"Is it the official Audiobookshelf app?","acceptedAnswer":{"@type":"Answer","text":"No. Meringo Listen is an independent third-party client and is not affiliated with or endorsed by the Audiobookshelf project. The official client is free and will keep existing; this is a paid, native-Compose alternative for listeners who want a premium client. Your device talks directly to your server — nothing proxies through us."}},
     {"@type":"Question","name":"Can I stream from Dropbox, Google Drive, or OneDrive?","acceptedAnswer":{"@type":"Answer","text":"No. The source list is Audiobookshelf and local folders (via Android's Storage Access Framework)."}},
@@ -212,7 +212,7 @@ p, li, dd { text-wrap: pretty; }
     <li><a href="#chapter-6"><span class="h-ch">Ch. 06</span><span class="h-title">Listen anywhere</span><span class="h-time">0:54</span></a></li>
     <li><a href="#chapter-7"><span class="h-ch">Ch. 07</span><span class="h-title">Honest audio</span><span class="h-time">1:12</span></a></li>
     <li><a href="#fence"><span class="h-ch"></span><span class="h-title">Is it for you?</span><span class="h-time">1:14</span></a></li>
-    <li><a href="#faq"><span class="h-ch"></span><span class="h-title">Questions</span><span class="h-time">3:16</span></a></li>
+    <li><a href="#faq"><span class="h-ch"></span><span class="h-title">Questions</span><span class="h-time">3:26</span></a></li>
   </ol>
 </nav>
 
@@ -410,7 +410,7 @@ p, li, dd { text-wrap: pretty; }
     </details>
     <details class="h-details">
       <summary>Does it track me?</summary>
-      <p>No analytics SDK, no ad SDK, no engagement metrics, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default, and your server URLs are redacted before any crash payload leaves the device. Apart from Google Play’s own billing library, which checks your purchase each time the app starts, your Audiobookshelf server and optional Sentry are the only outbound connections.</p>
+      <p>No analytics SDK, no ad SDK, no listening data sent anywhere. Crash reports through Sentry are opt-in and off by default. With them on, Sentry also learns each time the app is opened and how long it stays open, to count crash-free sessions — no screens, taps, books or listening. Your server URLs are redacted before any crash payload leaves the device. Apart from Google Play’s own billing library, which checks your purchase each time the app starts, your Audiobookshelf server and optional Sentry are the only outbound connections.</p>
     </details>
     <details class="h-details">
       <summary>How does it compare to Smart AudioBook Player or Voice?</summary>
@@ -464,7 +464,7 @@ p, li, dd { text-wrap: pretty; }
     <p class="h-meta">Last updated 2026-10-11 · Meringo Labs LLC</p>
 
     <h3 class="h-h3">The short version</h3>
-    <p>Meringo Listen is built local-first. It has <strong>no analytics, no ads, and no engagement tracking</strong>. The only data that ever leaves your device is (1) traffic to the Audiobookshelf server you choose to connect, (2) optional crash reports, which are off by default, and (3) what Google Play’s billing library exchanges with Google Play: it checks your purchase each time the app starts, and handles buying and restoring it. We never see your books, your listening, or your identity.</p>
+    <p>Meringo Listen is built local-first. It has <strong>no analytics, no ads, and no engagement tracking</strong>. The only data that ever leaves your device is (1) traffic to the Audiobookshelf server you choose to connect, (2) optional crash reports and their session records, which are off by default, and (3) what Google Play’s billing library exchanges with Google Play: it checks your purchase each time the app starts, and handles buying and restoring it. We never see your books, your listening, or your identity.</p>
 
     <h3 class="h-h3">Your audiobooks &amp; local files</h3>
     <p>When you add a folder, Android’s Storage Access Framework grants Meringo Listen read access to <strong>only that folder</strong>. Your audio never leaves the device — there is no upload, no scan sent anywhere, no cover-art lookup that transmits your files.</p>
@@ -475,7 +475,7 @@ p, li, dd { text-wrap: pretty; }
     <h3 class="h-h3">Crash reports (opt-in)</h3>
     <p>Crash reporting via Sentry is <strong>opt-in and off by default</strong>. If you turn it on and the app crashes, the report contains the stack trace and the app’s version, plus the state of the device at that moment: its model and processor, Android version, build and build ID, kernel version, whether it is rooted, when it last started up, language and time zone, battery level and temperature and whether it was charging, free memory and storage, connection type (Wi-Fi or mobile data), screen size, the permissions the app holds, the screen that was open, and whether the app came from Google Play.</p>
     <p>Sentry gives each installation a random ID so that repeat crashes from one device are counted together. It is not your advertising ID, and it is not tied to your name or any account. Sentry is set not to store IP addresses, so reports carry no location. Your <strong>server URLs are redacted</strong> before any payload leaves the device, and reports never include book titles, listening positions, or account tokens.</p>
-    <p>While crash reports are on, the app also sends Sentry a short session record each time it opens: the installation ID, the app’s version, how long the session lasted and whether it ended in a crash. Sentry uses these to count crash-free sessions.</p>
+    <p>With crash reports on, the app also tells Sentry each time it is opened and how long it stays open: a session record carrying the same random installation ID, which Sentry uses to count crash-free sessions. It contains no screens, taps, books or listening.</p>
     <p>From version 1.2.1 you can turn crash reports off at any time, in Settings → Crash reports; earlier test builds have no switch for it. To request deletion of any crash data, write to <a href="mailto:support@meringo.app">support@meringo.app</a>.</p>
 
     <h3 class="h-h3">Purchases through Google Play</h3>
