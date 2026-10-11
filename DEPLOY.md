@@ -96,9 +96,11 @@ The flip is one PR, merged only once Google Play shows the release. It does all 
    `https://play.google.com/store/apps/details?id=app.meringo.listen&referrer=utm_source%3Dmeringolisten.app%26utm_medium%3Dweb%26utm_campaign%3D<place>`
    (write `&amp;` for the `&` inside HTML).
 3. The beta copy comes out, so the live page carries no hidden "closed testing" text either.
-4. `<head>`, which no attribute can switch: the `<title>`, the meta description, the og and
-   twitter tags, and the first JSON-LD block (an `offers.availability` of `InStock` with the
-   bare Play URL, a `softwareVersion`, and the Play listing in `sameAs`).
+4. What no attribute can switch. The first JSON-LD block gets an `offers.availability` of
+   `InStock` with the bare Play URL, and the Play listing in the app's own `sameAs`. It gets no
+   `softwareVersion`: no release runbook bumps it, and it once said 1.0.0 for months. The FAQ
+   JSON-LD gains the live "How do I get it right now?" answer. Read the `<title>`, the meta
+   description and the og and twitter tags once; they carry no state wording today.
 5. The formats answer gets back "and Audiobookshelf's server-provided chapter lists", in the
    FAQ and in its JSON-LD twin (Meringo_Listen `docs/RELEASE_1.2.1.md` §6). Not the bookmark
    sentence ("exportable"): the app still has no export.
