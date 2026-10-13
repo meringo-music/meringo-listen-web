@@ -15,6 +15,10 @@ house.css             # house kit: the h- components
 CNAME                 # meringolisten.app  (GitHub Pages custom domain)
 _config.yml           # keeps this file and tools/ off the site (see below)
 robots.txt · sitemap.xml
+1c9c1939….txt         # the IndexNow key file (32 hex): public by design, it proves the ping is this site's
+.github/workflows/    # indexnow.yml: once Pages has deployed main, tells the IndexNow engines (Bing
+                      # and the others; not Google) the sitemap's URLs changed, and logs the HTTP
+                      # status they answer. No secrets; contents: read only.
 assets/fonts/         # Cormorant Garamond · Inter · Share Tech Mono (woff2) + OFL.txt
 assets/img/           # listen-icon.svg (the launcher icon, also the favicon) · meringo-mark.svg
 assets/screens/       # app screenshots (WebP + PNG fallback)
